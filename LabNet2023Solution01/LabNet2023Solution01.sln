@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabNet2023Project01", "LabNet2023Project01\LabNet2023Project01.csproj", "{A2982313-4821-4DAC-A616-683A251C738C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "Dominio\Dominio.csproj", "{3ED74D75-4DD5-473C-9EA5-67D6DEFC3813}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2982313-4821-4DAC-A616-683A251C738C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2982313-4821-4DAC-A616-683A251C738C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2982313-4821-4DAC-A616-683A251C738C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2982313-4821-4DAC-A616-683A251C738C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ED74D75-4DD5-473C-9EA5-67D6DEFC3813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ED74D75-4DD5-473C-9EA5-67D6DEFC3813}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ED74D75-4DD5-473C-9EA5-67D6DEFC3813}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ED74D75-4DD5-473C-9EA5-67D6DEFC3813}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DE24BAC5-2379-4DDE-BA87-D4E48C808CC0}
+	EndGlobalSection
+EndGlobal
