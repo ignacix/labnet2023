@@ -2,6 +2,7 @@
 using Logic;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,41 +12,27 @@ namespace LabNet2023Project03
     internal class Program
     {       
         static void Main(string[] args)
-        {
-            int opcion;
-            Console.WriteLine("\n MENÚ" +
-                    "\n 1)  TRAEME LAS CATEGORIES " +
-                    "\n 2)  TRAEME LOS SHIPPERS " +
-                    "\n 4)  SALIR ");
-            Console.WriteLine("Seleccione una opción");
-            opcion = int.Parse(Console.ReadLine());
-            Console.Clear();
+        {            
+            int opcion = pidoUnNumero();
 
             while (opcion != 4) 
             {
                 switch (opcion)
                 {
                     case 1:
-                        logica1 ();
+                        mostrarCategories();
                         break;
                     case 2:
-                        logica2();
+                        mostrarShippers();
                         break;
                     case 3:
                         Console.WriteLine();
                         break;
-                }
-
-                Console.WriteLine("\n MENÚ" +
-                        "\n 1)  TRAEME LAS CATEGORIES " +
-                        "\n 2)  TRAEME LOS SHIPPERS " +
-                        "\n 4)  SALIR ");
-                Console.WriteLine("Seleccione una opción");
-                opcion = int.Parse(Console.ReadLine());
-                Console.Clear();
+                }                
+                opcion = pidoUnNumero();
             }            
         }
-        static void logica1()
+        static void mostrarCategories()
         {
             CategoriesLogic categories = new CategoriesLogic();
 
@@ -54,7 +41,7 @@ namespace LabNet2023Project03
                 Console.WriteLine($"{category.CategoryName}: {category.Description}");
             }
         }
-        static void logica2()
+        static void mostrarShippers()
         {
             ShippersLogic shippers = new ShippersLogic();
 
@@ -62,6 +49,31 @@ namespace LabNet2023Project03
             {
                 Console.WriteLine($"{Shipper.CompanyName} , {Shipper.Phone}");
             }
+        }
+
+        static string mostrarMenu()
+        {
+            string menu = "\n\tMENÚ\n" +
+                "\n1)  TRAEME LAS CATEGORIES \n" +
+                "2)  TRAEME LOS SHIPPERS \n" +
+                "4)  SALIR \n" +
+                "\nSeleccione una opción";
+            return menu;
+        }
+
+        static int  pidoUnNumero()
+        {
+            int opcion;
+            string stringNumero;
+            bool esNumero = false;
+            do
+            {
+                Console.WriteLine(mostrarMenu());
+                stringNumero = Console.ReadLine();
+                esNumero = int.TryParse(stringNumero, out opcion);
+                Console.Clear();
+            } while (esNumero == false);
+            return opcion;
         }
 
     }
